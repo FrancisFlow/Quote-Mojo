@@ -1,8 +1,9 @@
 <div>
-
+<!-- div for displaying the highest upVote at the top -->
     <div *ngFor='let quote of quotes; let i = index' >
-        <ul>
-            <li>
+        <div appHighlightHighestUpvote *ngIf='highestUpVote()===quote.upVote'>
+          <ul>
+            <li >
                 {{quote.aQuote}}.
             </li>
             <li>
@@ -17,8 +18,36 @@
              ></app-quote-details>
         </ul>
 
+        </div>
+
 
 
     </div>
+
+    <!-- Show if not in highest upVote -->
+    <div *ngFor='let quote of quotes; let i = index' >
+        <div *ngIf='highestUpVote()!=quote.upVote'>
+          <ul>
+            <li >
+                {{quote.aQuote}}.
+            </li>
+            <li>
+                ~ {{quote.author}}.
+            </li>
+            <button (click)='toggleDetails(i)' > Toggle details</button>
+            <app-quote-details  *ngIf='quote.showDescription'
+             [quote]='quote' 
+            (toDelete)='nowDelete($event, i)'
+            (upThisVote)='addUpVote($event, i)'
+             (downThisVote)= 'addDownVote($event, i)'
+             ></app-quote-details>
+        </ul>
+
+        </div>
+
+
+
+    </div>
+
 
 </div>

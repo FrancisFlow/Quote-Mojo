@@ -52,6 +52,23 @@ export class QuotesComponent implements OnInit {
     }
   }
 
+// find the quote with the highest upvote
+
+highestUpVote() {
+  let highArray=[];
+
+  for(let i = 0; i<this.quotes.length; i++) {
+     highArray.push(this.quotes[i].upVote);
+  }
+  let highestVote = Math.max(...highArray);
+  if(highestVote===0) {
+    return 1
+  }
+  else{
+  return highestVote;
+  }
+}
+
   constructor() { }
 
   ngOnInit(): void {
