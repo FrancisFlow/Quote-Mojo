@@ -9,7 +9,12 @@
                 ~ {{quote.author}}.
             </li>
             <button (click)='toggleDetails(i)' > Toggle details</button>
-            <app-quote-details  *ngIf='quote.showDescription' [quote]='quote'  (toDelete)='nowDelete($event, i)' ></app-quote-details>
+            <app-quote-details  *ngIf='quote.showDescription'
+             [quote]='quote' 
+            (toDelete)='nowDelete($event, i)'
+            (upThisVote)='addUpVote($event, i)'
+             (downThisVote)= 'addDownVote($event, i)'
+             ></app-quote-details>
         </ul>
 
 

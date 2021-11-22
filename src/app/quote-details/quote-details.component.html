@@ -1,7 +1,7 @@
 <div>
     <ul>
         <li>Submitted by:  {{quote.iSubmit}}</li>
-        <li> {{quote.upVote}}<button>UpVote</button>  <span> {{quote.downVote}} <button>Downvote</button></span></li>
+        <li> {{quote.upVote}}<button (click)='upTheVote(true)'>UpVote</button>  <span> {{quote.downVote}} <button (click)='downTheVote(true)'>Downvote</button></span></li>
         <li> Posted {{quote.dayOfPosting | date| daysPassed}} days ago. </li> 
 
         <button (click)='deleteQuote(true)' >Delete quote</button>

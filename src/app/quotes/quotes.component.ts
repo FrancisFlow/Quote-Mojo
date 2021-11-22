@@ -34,6 +34,24 @@ export class QuotesComponent implements OnInit {
 }
   }
 
+  // function to add upVotes
+
+  addUpVote(upThisVote:boolean, index:number) {
+    if(upThisVote){
+    this.quotes[index].upVote++
+    }
+  }
+
+
+  //  function to add a downVote
+
+  addDownVote(downThisVote:boolean, index:number) {
+    if(downThisVote){
+    this.quotes[index].downVote--
+  
+    }
+  }
+
   constructor() { }
 
   ngOnInit(): void {

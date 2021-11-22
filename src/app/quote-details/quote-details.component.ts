@@ -16,7 +16,21 @@ export class QuoteDetailsComponent implements OnInit {
    this.toDelete.emit(Delete)
  }
 
+ //upvote function event emitter
 
+ @Output() upThisVote= new EventEmitter<boolean>();
+
+ upTheVote(up:boolean) {
+   this.upThisVote.emit(up)
+ }
+
+// event emitter for downVote
+
+@Output() downThisVote = new EventEmitter<boolean>();
+
+  downTheVote(down:boolean) {
+    this.downThisVote.emit(down)
+  }
   constructor() { }
 
   ngOnInit(): void {
