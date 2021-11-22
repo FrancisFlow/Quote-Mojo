@@ -1,4 +1,5 @@
 export class Quote {
+    showDescription:boolean;
     constructor(
         public aQuote:string, 
         public author:string,
@@ -8,6 +9,8 @@ export class Quote {
         public downVote:number,
         public dayOfPosting: Date
 
-    ){}
+    ){
+        this.showDescription=false;
+    }
 
 }
