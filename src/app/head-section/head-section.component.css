@@ -1,0 +1,13 @@
+
+
+.container-fluid {
+    background-color:orchid;
+    text-align: center;
+    padding: 40px;
+}
+
+.title{
+    text-align:center;
+    font-family: fantasy;
+    padding: 20px, 0;
+}
