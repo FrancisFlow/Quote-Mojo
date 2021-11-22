@@ -1,0 +1,23 @@
+.bluePrint{
+    background-color:skyblue;
+    padding-top:20px;
+}
+
+.form-center {
+    padding-top:20px;
+    padding-bottom:50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: inherit;
+    align-items:center
+
+
+
+}
+
+.center{
+text-align: center;
+font-family: fantasy;    
+
+}

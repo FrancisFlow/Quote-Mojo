@@ -1,19 +1,22 @@
-<div>
+<div class= 'form-center'>
  <form (ngSubmit)='submitQuote()' #newQuoteForm='ngForm'>
-     <h2>Share your quote</h2>
-     <div>
+     <h2 class="center" >Share your quote</h2>
+     <div class=" bluePrint form-center">
+         <div class="form-group col-md-6"> 
          <label for="iSubmit">Your name</label>
-         <textarea id="iSubmit" type="text" class="form-control" [(ngModel)]='newQuote.iSubmit' name='iSubmit'  #iSubmit='ngModel'></textarea>
-     </div>
-     <div>
+         <textarea class='form-control' id="iSubmit" type="text" class="form-control" [(ngModel)]='newQuote.iSubmit' name='iSubmit'  #iSubmit='ngModel' required></textarea>
+         </div>
+
+     <div class="form-group col-md-6" >
          <label for="author">Quote Author</label>
-         <textarea type="text" id="author"  [(ngModel)]='newQuote.author' name='author' #author='ngModel' ></textarea>
+         <textarea class='form-control' type="text" id="author"  [(ngModel)]='newQuote.author' name='author' #author='ngModel' required></textarea>
      </div>
 
-     <div>
+     <div class= "form-group col-md-6" >
          <label for="aQuote">Quote goes here</label>
-         <textarea type="text" id="aQuote" [(ngModel)]='newQuote.aQuote' name='aQuote' #aQuote='ngModel' ></textarea>
+         <textarea type="text" class='form-control' id="aQuote" [(ngModel)]='newQuote.aQuote' name='aQuote' #aQuote='ngModel' required></textarea>
      </div>
-     <button type="submit">Post quote</button>
+     <button class="btn btn-success" type="submit">Post quote</button>
+     </div>
  </form>
 </div>
