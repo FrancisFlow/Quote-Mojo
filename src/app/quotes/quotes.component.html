@@ -8,7 +8,7 @@
             <li>
                 {{quote.author}}
             </li>
-            <button>
+            <button (click)='toggleDetails(i)' >
                 Toggle details
             </button>
             <app-quote-details  *ngIf='quote.showDescription' [quote]='quote' ></app-quote-details>

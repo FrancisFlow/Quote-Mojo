@@ -17,6 +17,12 @@ export class QuotesComponent implements OnInit {
     new Quote("No matter how the wind howls, the mountain cannot bow to it", "Mula", "Disney Okumu", 3, 0, new Date(2021, 3, 16))
   ];
 
+  // function to show and hide details
+
+  toggleDetails(index: number) {
+    this.quotes[index].showDescription = !this.quotes[index].showDescription
+  }
+
   constructor() { }
 
   ngOnInit(): void {
