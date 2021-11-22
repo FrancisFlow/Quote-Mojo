@@ -1,0 +1,25 @@
+.quoteHi{
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.arrangement {
+
+    margin-top:10px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.quoteAuthor{
+    position: relative;
+    left:50%;
+    padding: 10px;
+}
+
+button {
+    margin:6px;
+    border-radius: 12px;
+}

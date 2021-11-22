@@ -1,21 +1,26 @@
-<div>
+
+<div class="container-fluid">
 <!-- div for displaying the highest upVote at the top -->
-    <div *ngFor='let quote of quotes; let i = index' >
+    <div class=' container-fluid arrangement col-md-4' *ngFor='let quote of quotes; let i = index' >
         <div appHighlightHighestUpvote *ngIf='highestUpVote()===quote.upVote'>
           <ul>
-            <li >
+              <div class='quote-hi'>
+            <li>
                 {{quote.aQuote}}.
             </li>
-            <li>
+            <li class='quoteAuthor'>
                 ~ {{quote.author}}.
             </li>
-            <button (click)='toggleDetails(i)' > Toggle details</button>
+            
+
+            <button class="btn btn-primary" (click)='toggleDetails(i)' > Toggle details</button>
+              </div>
             <app-quote-details  *ngIf='quote.showDescription'
              [quote]='quote' 
             (toDelete)='nowDelete($event, i)'
             (upThisVote)='addUpVote($event, i)'
-             (downThisVote)= 'addDownVote($event, i)'
-             ></app-quote-details>
+             (downThisVote)= 'addDownVote($event, i)'>
+            </app-quote-details>
         </ul>
 
         </div>
@@ -25,16 +30,18 @@
     </div>
 
     <!-- Show if not in highest upVote -->
-    <div *ngFor='let quote of quotes; let i = index' >
+    <div class='container-fluid arrangement col-md-4' *ngFor='let quote of quotes; let i = index' >
         <div *ngIf='highestUpVote()!=quote.upVote'>
           <ul>
+              <div class="quoteHi">
             <li >
                 {{quote.aQuote}}.
             </li>
-            <li>
+            <li class='quoteAuthor' >
                 ~ {{quote.author}}.
             </li>
-            <button (click)='toggleDetails(i)' > Toggle details</button>
+            <button class="btn btn-primary" (click)='toggleDetails(i)' > Toggle details</button>
+            </div>
             <app-quote-details  *ngIf='quote.showDescription'
              [quote]='quote' 
             (toDelete)='nowDelete($event, i)'

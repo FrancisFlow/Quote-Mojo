@@ -13,7 +13,7 @@ export class QuotesComponent implements OnInit {
     new Quote("Some people look for a beautiful place. Others make a beautiful place", "anonymous", "Kennedy Kamiro", 0, 0, new Date(2021, 4, 20)),
     new Quote("Keep your face to the sunshine and you cannot see a shadow", "Hellen Keller", "Walter Whitman", 0, 0, new Date(2021, 5, 23)),
     new Quote("Nobody ever wrote a plan to be broke, fat, lazy or stupid. those things are what happen when you don't have a plan", "Larry Winget", "Michelle Muthoni", 0, 0, new Date(2021, 7, 22)),
-    new Quote("A single grain of rice can tip the scale", "Emperor", "Faith Kamau", 0, 0, new Date(2021, 8, 22)),
+    new Quote("A single grain of rice can tip the scale, an extra second", "Emperor", "Faith Kamau", 0, 0, new Date(2021, 8, 22)),
     new Quote("No matter how the wind howls, the mountain cannot bow to it", "Mula", "Disney Okumu", 0, 0, new Date(2021, 3, 16))
   ];
 
@@ -61,7 +61,7 @@ highestUpVote() {
      highArray.push(this.quotes[i].upVote);
   }
   let highestVote = Math.max(...highArray);
-  if(highestVote===0) {
+  if(highestVote===0){
     return 1
   }
   else{
