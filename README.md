@@ -1,5 +1,5 @@
 # Quote-Mojo
-#### An application where users can create quotes, post and vote on them.
+ An Angular application where users can create quotes, post and vote on them.
 #### By Francis Ngigi
 ## Description
 In Quote-Mojo a user can create a new quote and post it using a form. The user can also upvote or downvote any quote, or delete it.
