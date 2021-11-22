@@ -3,5 +3,7 @@
         <li>Submitted by:  {{quote.iSubmit}}</li>
         <li> {{quote.upVote}}<button>UpVote</button>  <span> {{quote.downVote}} <button>Downvote</button></span></li>
         <li> {{quote.dayOfPosting | date}} </li> 
+
+        <button (click)='deleteQuote(true)' >Delete quote</button>
     </ul>
 </div>

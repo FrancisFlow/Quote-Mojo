@@ -20,7 +20,18 @@ export class QuotesComponent implements OnInit {
   // function to show and hide details
 
   toggleDetails(index: number) {
-    this.quotes[index].showDescription = !this.quotes[index].showDescription
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+
+  // function to delete-quote
+
+  nowDelete(toDelete:boolean, index:number) {
+    if(toDelete) {
+      let deleteNow = confirm(`Are you sure you want to delete 
+      ${this.quotes[index].aQuote} ?`)
+      if(deleteNow) { this.quotes.splice(index, 1)}
+
+}
   }
 
   constructor() { }

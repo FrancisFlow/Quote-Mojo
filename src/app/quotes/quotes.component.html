@@ -3,15 +3,13 @@
     <div *ngFor='let quote of quotes; let i = index' >
         <ul>
             <li>
-                {{quote.aQuote}}
+                {{quote.aQuote}}.
             </li>
             <li>
-                {{quote.author}}
+                ~ {{quote.author}}.
             </li>
-            <button (click)='toggleDetails(i)' >
-                Toggle details
-            </button>
-            <app-quote-details  *ngIf='quote.showDescription' [quote]='quote' ></app-quote-details>
+            <button (click)='toggleDetails(i)' > Toggle details</button>
+            <app-quote-details  *ngIf='quote.showDescription' [quote]='quote'  (toDelete)='nowDelete($event, i)' ></app-quote-details>
         </ul>
 
 
