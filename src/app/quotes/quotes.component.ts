@@ -69,6 +69,13 @@ highestUpVote() {
   }
 }
 
+
+// function for adding new Quote
+
+addNewQuote(newQuote:Quote){
+  this.quotes.push(newQuote);
+ }
+
   constructor() { }
 
   ngOnInit(): void {
