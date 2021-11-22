@@ -1,0 +1,18 @@
+<div>
+
+    <div *ngFor='let quote of quotes' >
+        <ul>
+            <li>
+                {{quote.aQuote}}
+            </li>
+            <li>
+                {{quote.author}}
+            </li>
+            <app-quote-details [quote]='quote' ></app-quote-details>
+        </ul>
+
+
+
+    </div>
+
+</div>
